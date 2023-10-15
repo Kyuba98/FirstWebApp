@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html>
 <head>
 <style>
-.bp {
-    background-color: white;
+button{
+    background-color: transparent;
     border: none;
     color: none;
     text-align: center;
@@ -13,6 +11,13 @@
     margin: 2px 2px;
     cursor: pointer;
 }
+.sh:hover {
+    filter: drop-shadow(0px 0px 15px green);
+}
+button:active{
+    filter: drop-shadow(0px 0px 10px red);
+}
+
 h1{
     text-align: center;
 }
@@ -27,33 +32,34 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    transition: filter 0.8s ease;
 }
+
 </style>
 </head>
-</html>
 
-<h1>Chose your pokemon!</h1>
+<h1>Choose your pokemon!</h1>
 <div class="container">
     @using (Html.BeginForm("Index"))
     {
-        <button type="submit" name="pokemon" class="bp" value="7.png">
-            <img src="img/ball.png" width="50" height="50" />
+        <button type="submit" name="pokemon" value="7.png">
+            <img src="img/ball.png" class="sh" width="50" height="50" />
+        </button>       
+        <button type="submit" name="pokemon" value="2.png">
+            <img src="img/ball.png" class="sh" width="50" height="50" />
         </button>
-        <button type="submit" name="pokemon" class="bp" value="2.png">
-            <img src="img/ball.png" width="50" height="50" />
-        </button>
-        <button type="submit" name="pokemon" class="bp" value="3.png">
-            <img src="img/ball.png" width="50" height="50" />
+        <button type="submit" name="pokemon" value="3.png">
+            <img src="img/ball.png" class="sh" width="50" height="50" />
         </button>
         <br />
-        <button type="submit" name="pokemon" class="bp" value="4.png">
-            <img src="img/ball.png" width="50" height="50" />
+        <button type="submit" name="pokemon" value="4.png">
+            <img src="img/ball.png" class="sh" width="50" height="50" />
         </button>
-        <button type="submit" name="pokemon" class="bp" value="5.png">
-            <img src="img/ball.png" width="50" height="50" />
+        <button type="submit" name="pokemon" value="5.png">
+            <img src="img/ball.png" class="sh" width="50" height="50" />
         </button>
-        <button type="submit" name="pokemon" class="bp" value="6.png">
-            <img src="img/ball.png" width="50" height="50" />
+        <button type="submit" name="pokemon" value="6.png">
+            <img src="img/ball.png" class="sh" width="50" height="50" />
         </button>
     }
 </div>

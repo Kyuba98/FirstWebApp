@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Confirm";
+}
+<style>
+    .bg {
+        border-style: solid;
+        border-color: limegreen;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 100px;
+        border-radius: 50px;
+    }
+</style>
+<div class="bg">
+    <h1>Udało się wysłać dane</h1><br/>
+
+    <p>Imię: @ViewData["name"]</p><br />
+    <p>Nazwisko: @ViewData["lname"] </p><br />
+    <p>Miasto: @ViewData["city"]</p>
+</div>
